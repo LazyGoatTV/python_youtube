@@ -94,7 +94,7 @@ class Api(object):
         "https://www.googleapis.com/auth/userinfo.profile",
     ]
 
-    DEFAULT_STATE = "PyYouTube"
+    DEFAULT_STATE = "python_youtube"
     DEFAULT_TIMEOUT = 10
     DEFAULT_QUOTA = 10000  # this quota reset at 00:00:00(GMT-7) every day.
 

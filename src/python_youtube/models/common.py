@@ -64,7 +64,7 @@ class BaseTopicDetails(BaseModel):
         Convert topicIds list to Topic model list
         :return: List[Topic]
         """
-        from pyyoutube import TOPICS
+        from ..utils.constants import TOPICS
 
         r: List[Topic] = []
         if self.topicIds:
