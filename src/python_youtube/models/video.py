@@ -165,6 +165,21 @@ class VideoTopicDetails(BaseTopicDetails):
 
 
 @dataclass
+class VideoLiveStreamingDetails(BaseModel, DatetimeTimeMixin):
+    """
+    A class representing the video liveStreamingDetails info.
+
+    Refer: https://developers.google.com/youtube/v3/docs/videos#liveStreamingDetails
+    """
+
+    actualStartTime: Optional[str] = field(default=None, repr=False)
+    actualEndTime: Optional[str] = field(default=None, repr=False)
+    scheduledStartTime: Optional[str] = field(default=None, repr=False)
+    scheduledEndTime: Optional[str] = field(default=None, repr=False)
+    concurrentViewers: Optional[int] = field(default=None)
+    activeLiveChatId: Optional[str] = field(default=None, repr=False)
+
+@dataclass
 class VideoSnippet(BaseModel, DatetimeTimeMixin):
     """
     A class representing the video snippet info.
@@ -234,6 +249,7 @@ class Video(BaseResource):
     statistics: Optional[VideoStatistics] = field(default=None, repr=False)
     topicDetails: Optional[VideoTopicDetails] = field(default=None, repr=False)
     player: Optional[Player] = field(default=None, repr=False)
+    liveStreamingDetails: Optional[VideoLiveStreamingDetails] = field(default=None, repr=False)
 
 
 @dataclass

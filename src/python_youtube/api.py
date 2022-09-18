@@ -9,8 +9,8 @@ from requests.auth import HTTPBasicAuth
 from requests.models import Response
 from requests_oauthlib.oauth2_session import OAuth2Session
 
-from pyyoutube.error import ErrorCode, ErrorMessage, PyYouTubeException
-from pyyoutube.models import (
+from .error import ErrorCode, ErrorMessage, PyYouTubeException
+from .models import (
     AccessToken,
     UserProfile,
     ActivityListResponse,
@@ -31,7 +31,7 @@ from pyyoutube.models import (
     MembershipsLevelListResponse,
     VideoAbuseReportReasonListResponse,
 )
-from pyyoutube.utils.params_checker import enf_comma_separated, enf_parts
+from .utils.params_checker import enf_comma_separated, enf_parts
 
 
 class Api(object):

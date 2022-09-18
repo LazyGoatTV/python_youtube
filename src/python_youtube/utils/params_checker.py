@@ -5,8 +5,8 @@ import logging
 
 from typing import Optional, Union
 
-from pyyoutube.error import ErrorCode, ErrorMessage, PyYouTubeException
-from pyyoutube.utils.constants import RESOURCE_PARTS_MAPPING
+from ..error import ErrorCode, ErrorMessage, PyYouTubeException
+from .constants import RESOURCE_PARTS_MAPPING
 
 logger = logging.getLogger(__name__)
 
@@ -69,6 +69,7 @@ def enf_parts(resource: str, value: Optional[Union[str, list, tuple, set]], chec
     Returns:
         Api needed part string
     """
+
     if value is None:
         parts = RESOURCE_PARTS_MAPPING[resource]
     elif isinstance(value, str):

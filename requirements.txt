@@ -1,0 +1,4 @@
+requests
+requests-oauthlib
+isodate
+dataclasses-json
