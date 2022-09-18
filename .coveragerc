@@ -1,2 +1,2 @@
 [run]
-omit = pyyoutube/__version__.py
+omit = src/python_youtube/__version__.py
